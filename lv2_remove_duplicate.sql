@@ -4,4 +4,8 @@
 SELECT COUNT(DISTINCT(NAME))
 FROM ANIMAL_INS
   
-/* NULL 값은 DISTINCT 처리 시 무시되며, 중복 여부를 판단하지 않는다. 그래서 DISTINCT 처리하고 바로 COUNT 함수를 사용하면 된다. 
+/* NULL 값은 DISTINCT 처리 시 무시되며, 중복 여부를 판단하지 않는다. 그래서 DISTINCT 처리하고 바로 COUNT 함수를 사용하면 된다.*/
+
+SELECT COUNT(DISTINCT NAME) AS count
+FROM ANIMAL_INS
+WHERE NAME IS NOT NULL;
